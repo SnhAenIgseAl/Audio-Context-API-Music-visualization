@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/index.css" rel="stylesheet" type="text/css">
+	<script src="/js/jsmediatags.min.js"></script>
+	<script src="/js/dance.js"></script>
+	<script src="/js/playmusic.js"></script>
+	<title>Audio Context API 音乐可视化</title>
+</head>
+<body>
+
+	<audio name="media" id="music" autoplay>
+		<source id="src" src="" type="audio/mp3">
+	</audio>
+	
+	<div id="wallper">
+		<div id="box">
+
+			<!-- 封面 -->
+			<div  class="container noExtend" style="width: unset;">
+				<img id="songImg"src="">
+			</div>
+			
+			<!-- 歌曲信息 -->
+			<div class="container info noExtend" style="padding-bottom: 30px; justify-content: space-between;">
+				<!-- 歌曲名 -->
+				<p id="songName" class="title" style="margin-bottom: 30px;"></p>
+				<!-- 歌曲作者 -->
+				<p id="author" class="subtitle" style="margin-bottom: 30px;"></p>	
+			</div>
+		</div>
+	</div>
+
+	<!-- 控制面板 -->
+	<div id="controlsBox">
+
+		<!-- 上传 -->
+		<input type="file" accept="*/flac" id="musicFile">
+		<!-- 重新开始 -->
+		<div id="back"><i>&#xe999;</i></div>
+		<!-- 播放 / 暂停 -->
+		<div id="playOrPause"><i>&#xe890;</i></div>
+		<!-- 音量 -->
+		<div id="volumeBox">
+			<i>&#xe8fc;</i>
+			<div id="volume">
+				<div id="volume-value"></div>
+				<div id="volume-point"></div>
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- 进度条 -->
+	<div id="progressBox">
+		<div id="progress">
+			<div id="point"></div>
+		</div>
+	</div>
+
+	<canvas id="cas" width="1920" height="1080"></canvas>
+
+	<ul id="music-animate">
+		<li></li>
+	</ul>
+
+</body>
+</html>
