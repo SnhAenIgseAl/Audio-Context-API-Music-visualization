@@ -77,7 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 			let barHeight;
 
-			draw1()
+			draw2()
 
 			/**
 			 * 顺序绘制
